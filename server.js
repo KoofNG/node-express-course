@@ -18,6 +18,12 @@ const mockUserData = [
   },
 ];
 
+app.post("/register", function (req, res) {
+  const user = req.body;
+
+  res.status(201).json({ body: user });
+});
+
 app.post("/login", function (req, res) {
   const username = req.body.username;
   const password = req.body.password;
