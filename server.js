@@ -21,7 +21,7 @@ const mockUserData = [
 app.post("/register", function (req, res) {
   const user = req.body;
 
-  res.status(201).json({ body: user });
+  res.status(201).json({ user: user });
 });
 
 app.post("/login", function (req, res) {
