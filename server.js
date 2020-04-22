@@ -18,6 +18,15 @@ app.get("/users", function (req, res) {
   });
 });
 
+app.get("/users/:id", function (req, res) {
+  console.log(req.params.id);
+  res.status(200).send({
+    success: true,
+    message: "successfully got users. Nice!",
+    users: req.params.id,
+  });
+});
+
 app.listen(3000, function () {
   console.log("Server is running");
 });
